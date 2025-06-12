@@ -1,21 +1,116 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Unit Test for xerfia's Personal Page</title>
+    <script>
+        function runTests() {
+            // Happy Path Tests
+            testTitleText();
+            testFirstParagraph();
+            testNestedListItems();
+            testFruitListItems();
 
-<!--注释格式-->
-<!--html部分是html网页整体结构，一个网页是由标签栏和页面主体构成的-->
-<html>
+            // Edge Case Tests
+            testMissingTitleText();
+            testEmptyFirstParagraph();
+            testSingleListItem();
+            testNoListItems();
 
-    <!--head是标签栏的信息内容-->
-    <head>
-    <meta charset="utf-8"><!--整个网页使用的渲染格式-->
-    <title>xerfiaの小居</title><!--标题内容-->
-    </head>
+            console.log("All tests completed.");
+        }
 
-    <!--body是在网页显示主体，在浏览器中渲染的部分，最原始的body就只有标题和段落-->
-    <body>
-        <!--hn就是段落标题-->
-        <h1>我的第一个标题</h1>
-        <!--p，即paragraphs，就是网页中渲染的段落内容-->
-        <p>我的第一个段落。</p>
-    </body>
+        function testTitleText() {
+            var titleText = document.getElementById("title_text").innerText;
+            console.assert(titleText === "About Me!", "Test Failed: Title text is not as expected.");
+        }
 
+        function testFirstParagraph() {
+            var firstParagraph = document.querySelector("#about_me p").innerText;
+            console.assert(firstParagraph === "我的第一个段落：Learn a littel bit about me.", "Test Failed: First paragraph text is not as expected.");
+        }
+
+        function testNestedListItems() {
+            var nestedListItems = document.querySelectorAll("#about_me ul ul li");
+            console.assert(nestedListItems.length === 2, "Test Failed: Nested list does not have the expected number of items.");
+        }
+
+        function testFruitListItems() {
+            var fruitListItems = document.querySelectorAll("ul:last-of-type li");
+            console.assert(fruitListItems.length === 6, "Test Failed: Fruit list does not have the expected number of items.");
+        }
+
+        function testMissingTitleText() {
+            var titleText = document.getElementById("quote").innerText;
+            console.assert(titleText === "“", "Test Failed: Quote text is not as expected.");
+        }
+
+        function testEmptyFirstParagraph() {
+            var emptyParagraph = document.createElement("p");
+            emptyParagraph.id = "empty_paragraph";
+            document.getElementById("about_me").appendChild(emptyParagraph);
+            var paragraphText = document.getElementById("empty_paragraph").innerText;
+            console.assert(paragraphText === "", "Test Failed: Empty paragraph text is not as expected.");
+        }
+
+        function testSingleListItem() {
+            var singleListItem = document.createElement("li");
+            singleListItem.innerText = "single item";
+            var singleList = document.createElement("ul");
+            singleList.appendChild(singleListItem);
+            document.body.appendChild(singleList);
+            var listItems = document.querySelectorAll("ul:last-of-type li");
+            console.assert(listItems.length === 1, "Test Failed: Single list does not have the expected number of items.");
+        }
+
+        function testNoListItems() {
+            var noListItems = document.createElement("ul");
+            document.body.appendChild(noListItems);
+            var listItems = document.querySelectorAll("ul:last-of-type li");
+            console.assert(listItems.length === 0, "Test Failed: List with no items does not have the expected number of items.");
+        }
+
+        window.onload = runTests;
+    </script>
+</head>
+<body>
+    <!--hn就是段落标题-->
+    <h1>
+        <div id="quote">“</div>
+        <div id="title_text">About Me!</div></div>
+    </h1>
+    这是我的第一个大标题及网页
+    <h1>我的第一个标题：关于我</h1>
+    <!--p，即paragraphs，就是网页中渲染的段落内容-->
+    <div id="about_me">
+        <img src="touxiang.jpg" alt="我的头像" width="200" height="200">
+        <p>我的名字叫做Xerfia，我是一个热爱编程的学生，我热爱音乐，我喜欢看书，我喜欢旅行，我喜欢看电影，我喜欢看二次元动漫！</p>
+        <p>我的第一个段落：Learn a littel bit about me.</p>
+        <ul style="border-top: aqua solid 2px;">
+            <li>I love coding</li>
+            <li>I love playing guitar</li>
+            <ul style="border-start-end-radius: 10px; border-top: aqua solid 2px;">
+                <li>I play the guitar in my free time</li>
+                <li>I play the guitar in my spare time</li>
+            </ul>
+        </ul>
+    </div>
+
+    <h1>以下是一个无序列表</h1>
+    <ul>
+        <li>
+            <a href="https://vams.cqvip.com/admin/index.jsp">毛泽东思想与中国特色社会主义课程论文15号截至</a>
+        </li>
+        <li>
+            常用的查找理论文献的网站
+            <a href="https://qikan.cqvip.com/index.html?from=Qikan_Search_Index">维普文献检索</a>
+            <a href="https://www.ncpssd.cn/index">国家社会科学文献中心</a>
+            <a href="https://www.cnki.net/">中国知网</a>
+        </li>
+        <li>oranges</li>
+        <li>grapes</li>
+        <li>pears</li>
+        <li>peaches</li>
+    </ul>
+</body>
 </html>
