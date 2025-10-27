@@ -96,25 +96,25 @@
                         <a class="nav-link me-lg-3" href="#page-top">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#个人简介">个人简介</a>
+                        <a class="nav-link me-lg-3" href="#Introduction">Introduction</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#教育经历">教育经历</a>
+                        <a class="nav-link me-lg-3" href="#Education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#项目经历">项目经历</a>
+                        <a class="nav-link me-lg-3" href="#Project">Project</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#专业技能">专业技能</a>
+                        <a class="nav-link me-lg-3" href="#Profassional">Profassional</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#综合技能">综合技能</a>
+                        <a class="nav-link me-lg-3" href="#General">General</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#社团与组织经历">社团与组织经历</a>
+                        <a class="nav-link me-lg-3" href="#Club Experience">Club Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#爱好及特长">爱好及特长</a>
+                        <a class="nav-link me-lg-3" href="#Hobbies">Hobbies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="contents/HowtoCommunicate.html" target="_blank">Xyy1001交流指南</a>
@@ -124,154 +124,168 @@
         </div>
     </nav>
 
-    <!-- Top Section -->
+    <!-- Top Section --><!--
     <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
         <div class="top-section-content">
             <div class="container px-5">
                 <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- Top Section -->
+    <!-- 两栏主布局：左侧为侧边栏（头像 + 联系方式 + 菜单），右侧为主要内容 -->
+    <div class="container px-5 mt-5">
+        <div class="row">
+            <aside class="col-lg-4 mb-4" id="sidebar">
+                <div class="card p-3 sticky-sidebar">
+                    <!--将图片放置在sidebar中间-->
+                    <img class="shadow rounded-circle" src="static/assets/img/photo.png" alt="avatar" style="max-width:180px; display: block; margin: 0 auto;">
+                    <!--换行-->
+                    <br>
+                    <div class="person-info text-center mb-3">
+                        <h4 class="mb-1">Xyy1001</h4>
+                        <div class="mb-2">Xu Yingyu</div>
+                        <div class="small">
+                            <div style="left: auto;">Student Email: <a href="mailto:202330841782@mail.scut.edu.cn" left>202330841782@mail.scut.edu.cn</a></div>
+                            <div style="left: auto;">Gmail: <a href="mailto:xuyingyuy1001@gmail.com">xuyingyuy1001@gmail.com</a></div>
+                            <div style="left: auto;">Linkedin: <a href="https://www.linkedin.com/in/xuyingyuy1001" target="_blank">https://www.linkedin.com/in/xuyingyuy1001</a></div>
+                            <div style="left: auto;">GitHub: <a href="https://github.com/Xyy1001" target="_blank">github.com/Xyy1001</a></div>
+                        </div>
+                    </div>
 
-    <!-- Photo -->
-    <div class="container px-5" id="个人简介">
-        <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.png">
+                    <nav id="sidebar-menu" class="mt-3">
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action" href="#home">HOME</a>
+                            <a class="list-group-item list-group-item-action" href="#Introduction">Introduction</a>
+                            <a class="list-group-item list-group-item-action" href="#Education">Education</a>
+                            <a class="list-group-item list-group-item-action" href="#Project">Project</a>
+                            <a class="list-group-item list-group-item-action" href="#Profassional">Profassional</a>
+                            <a class="list-group-item list-group-item-action" href="#General">General</a>
+                            <a class="list-group-item list-group-item-action" href="#Club Experience">Club Experience</a>
+                            <a class="list-group-item list-group-item-action" href="#Hobbies">Hobbies</a>
+                            <a class="list-group-item list-group-item-action" href="contents/HowtoCommunicate.html" target="_blank">Xyy1001交流指南</a>
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+
+            <main class="col-lg-8" id="main-content">
+                <!-- Home -->
+                <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
+                    <div class="container px-0">
+                        <header>
+                            <h2>Xyy1001 | Xu Yingyu</h2>
+                        </header>
+                        <div class="main-body" id="home-md"></div>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="Education">
+                    <div class="container px-0">
+                        <header>
+                            <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Education</h2>
+                        </header>
+                        <div class="main-body" id="publications-md"></div>
+                        <p>
+                            华南理工大学 软件工程+工商管理双学位试点项目-本科	
+                            <strong style="text-align: right;">(2023.09 - 2027.07)</strong>
+                            <br>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Project -->
+                <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="Project">
+                    <div class="container px-0">
+                        <header>
+                            <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Project</h2>
+                        </header>
+                        <div class="main-body" id="publications-md"></div>
+                        <div class="mt-2">
+                            <p class="with-dot">课程设计-以图搜图-核心技术成员 2025.03-2025.05</p>
+                            <p>
+                                这是一个基于Pytorch的图像切割分析框架和工业级检索增强索引Faiss构建的一个图像搜索网站
+                                <br>
+                                仓库链接：<a href="https://github.com/Xyy1001/FaissPictureSearching">https://github.com/Xyy1001/FaissPictureSearching</a>
+                            </p>
+                            <br>
+                            <p class="with-dot">课程设计-基于Linux的文件操作系统-独立开发 2025.03-2025.04</p>
+                            <p>
+                                这是一个基于Linux系统所提供接口开发的文件操作系统，实现大多数文件操作功能，支持实盘读写。
+                                <br>
+                                仓库链接：<a href="https://github.com/Xyy1001/FS-based-on-Linux">https://github.com/Xyy1001/FS-based-on-Linux</a>
+                            </p>
+                            <br>
+                            <p class="with-dot">零框架依赖文件操作Agent-独立开发 2025.07-2025.08</p>
+                            <p>
+                                仿照Lang Chain开源框架，实现仅依靠大模型API与模型文字流交互的文件操作工具，有望拓展成为一个新的AI Agent开发框架。
+                                <br>
+                                仓库链接：<a href="https://github.com/Xyy1001/FS-Agent">https://github.com/Xyy1001/FS-Agent</a>
+                            </p>
+                            <br>
+                            <p class="with-dot">基于机器学习优化个人ETF资产配置SRP-核心技术成员	2025.03-2026.4</p>
+                            <p>
+                                网站定位是辅助投资者分析的助手，核心模块分别为多样化数据融合、机器学习量价分析与预测，以及Agent + RAG支持的强大交互性能。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Profassional -->
+                <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="Profassional">
+                    <div class="container px-0">
+                        <header>
+                            <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Profassional</h2>
+                        </header>
+                        <div class="main-body" id="publications-md"></div>
+                        <div>
+                            C语言、C++等编程语言、Lang Chain、Oxygent等Agent开发框架、Node.js、Vue等前端开发框架、NoSQL等数据库工具、CVAT标注工具
+                        </div>
+                    </div>
+                </section>
+
+                <!-- General -->
+                <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="General">
+                    <div class="container px-0">
+                        <header>
+                            <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;General</h2>
+                        </header>
+                        <div class="main-body" id="publications-md"></div>
+                        <div>
+                            <p class="with-dot">
+                                文档管理：熟练使用Office、Latex，MATLAB、Qt、Zotero
+                            </p>
+                            <p class="with-dot">
+                                团队工作：熟练使用Fei Shu、Notion
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Club Experience -->
+                <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="Club Experience">
+                    <div class="container px-0">
+                        <header>
+                            <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Club Experience</h2>
+                        </header>
+                        <div class="main-body" id="publications-md"></div>
+                    </div>
+                </section>
+
+                <!-- Hobbies -->
+                <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="Hobbies">
+                    <div class="container px-0">
+                        <header>
+                            <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;Hobbies</h2>
+                        </header>
+                        <div class="main-body" id="publications-md"></div>
+                    </div>
+                </section>
+                <!-- Hobbies  -->
+            </main>
         </div>
     </div>
-    <!-- Photo -->
-    
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <header>
-                <!--<h2 id="home-subtitle"></h2>-->
-                <h2>Xyy1001 | Xu Yingyu</h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
-        </div>
-        <div class="container px-5">
-            <a>学生邮箱：<a>202330841782@mail.scut.edu.cn</a>
-                <br>
-            <a>QQ邮箱：<a>3503269275@qq.com</a>
-                <br>
-            <a>GitHub主页：<a href="https://github.com/Xyy1001" target="_blank">https://github.com/Xyy1001</a>
-        </div>
-    </section>
-    <!-- Home -->
-
-    <!-- 教育经历 -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="教育经历">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;教育经历</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
-        <div class="container px-5">
-            <p>
-                华南理工大学 软件工程+工商管理双学位试点项目-本科	
-                <strong style="text-align: right;">(2023.09 - 2027.07)</strong>
-                <br>
-            </p>
-        </div>
-    </section>
-    <!-- 教育经历  -->
-
-    <!-- 项目经历 -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="项目经历">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;项目经历</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
-        <div class="container px-5">
-            <p class="with-dot">课程设计-以图搜图-核心技术成员 2025.03-2025.05</p>
-            <p>
-                这是一个基于Pytorch的图像切割分析框架和工业级检索增强索引Faiss构建的一个图像搜索网站
-                <br>
-                仓库链接：<a href="https://github.com/Xyy1001/FaissPictureSearching">https://github.com/Xyy1001/FaissPictureSearching</a>
-            </p>
-            <br>
-            <p class="with-dot">课程设计-基于Linux的文件操作系统-独立开发 2025.03-2025.04</p>
-            <p>
-                这是一个基于Linux系统所提供接口开发的文件操作系统，实现大多数文件操作功能，支持实盘读写。
-                <br>
-                仓库链接：<a href="https://github.com/Xyy1001/FS-based-on-Linux">https://github.com/Xyy1001/FS-based-on-Linux</a>
-            </p>
-            <br>
-            <p class="with-dot">零框架依赖文件操作Agent-独立开发 2025.07-2025.08</p>
-            <p>
-                仿照Lang Chain开源框架，实现仅依靠大模型API与模型文字流交互的文件操作工具，有望拓展成为一个新的AI Agent开发框架。
-                <br>
-                仓库链接：<a href="https://github.com/Xyy1001/FS-Agent">https://github.com/Xyy1001/FS-Agent</a>
-            </p>
-            <br>
-            <p class="with-dot">基于机器学习优化个人ETF资产配置SRP-核心技术成员	2025.03-2026.4</p>
-            <p>
-                网站定位是辅助投资者分析的助手，核心模块分别为多样化数据融合、机器学习量价分析与预测，以及Agent + RAG支持的强大交互性能。
-            </p>
-        </div>
-    </section>
-    <!-- 项目经历  -->
-
-    <!-- 专业技能 -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="专业技能">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;专业技能</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
-        <div class="container px-5">
-            C语言、C++等编程语言、Lang Chain、Oxygent等Agent开发框架、Node.js、Vue等前端开发框架、NoSQL等数据库工具、CVAT标注工具
-        </div>
-    </section>
-    <!-- 专业技能  -->
-
-    <!-- 综合技能 -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="综合技能">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;综合技能</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
-        <div class="container px-5">
-            <p class="with-dot">
-                文档管理：熟练使用Office、Latex，MATLAB、Qt、Zotero
-            </p>
-            <p class="with-dot">
-                团队工作：熟练使用Fei Shu、Notion
-            </p>
-        </div>
-    </section>
-    <!-- 综合技能  -->
-
-    <!-- 社团与组织经历 -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="社团与组织经历">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;社团与组织经历</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
-    </section>
-    <!-- 社团与组织经历  -->
-
-    <!-- 爱好及特长 -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="爱好及特长">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;爱好及特长</h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-        </div>
-    </section>
-    <!-- 爱好及特长  -->
 
     <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
